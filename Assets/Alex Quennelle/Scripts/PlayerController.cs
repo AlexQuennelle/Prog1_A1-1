@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
 	//float values that  control the speed at which the player will move and rotate.
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float rotateSpeed = 1f;
+
+	[SerializeField] Health health;
+
 	//stores the player's rigidbody component to apply physics forces to
     Rigidbody2D rb;
     private void Start()
@@ -46,4 +49,8 @@ public class PlayerController : MonoBehaviour
         Vector2 newPos = new Vector2(((transform.position.x + 48) % 32) - 16, ((transform.position.y + 27) % 18) - 9);
         transform.position = newPos;
     }
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		health.TakeDammage();
+	}
 }

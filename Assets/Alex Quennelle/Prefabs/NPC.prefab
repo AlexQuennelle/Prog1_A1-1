@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc27d45a3bd249946a7835d806e26f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4.5
   targetRad: 1
-  aggroRange: 3
+  aggroRange: 6
   player: {fileID: 0}

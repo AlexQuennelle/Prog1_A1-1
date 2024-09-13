@@ -415,14 +415,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1014967589}
-    - target: {fileID: 637530676826375885, guid: 0ace45ff6b9ac39439460df88d18ac00, type: 3}
-      propertyPath: moveSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 637530676826375885, guid: 0ace45ff6b9ac39439460df88d18ac00, type: 3}
-      propertyPath: aggroRange
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 2822413519927975166, guid: 0ace45ff6b9ac39439460df88d18ac00, type: 3}
       propertyPath: m_Name
       value: NPC

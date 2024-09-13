@@ -195,3 +195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rotateSpeed: 1
+  health:
+    hitPoints: 1
+    onDeath:
+      m_PersistentCalls:
+        m_Calls: []
