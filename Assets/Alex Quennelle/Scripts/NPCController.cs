@@ -17,6 +17,7 @@ public class NPCController : MonoBehaviour
     Vector2 targetPos;
 	//reference to the NPC's rigidbody to apply physics forces too
     Rigidbody2D rb;
+	//method that is called once at the start of the game
     private void Start()
     {
 		//fetches and stores the NPC's attached Rigidbody2D component
@@ -25,6 +26,7 @@ public class NPCController : MonoBehaviour
 		//initializes the target position to a random point on a unit circle around the NPC
         targetPos = (new Vector2(Random.value * 2 - 1, Random.value * 2 - 1)) + (Vector2)transform.position;
     }
+	//method that is called once every frame
     private void Update()
     {
 		//sets the NPC's up vector to be one that points from its current position to the target position
@@ -62,6 +64,7 @@ public class NPCController : MonoBehaviour
 		//this moves the target position to be closer to the NPC when it is too far away, keeping its relative position from before its position was adjusted
         targetPos = new Vector2(targetPos.x + (xMod * 32), targetPos.y + (yMod * 18));
     }
+	//method that is called once every frame in the scene view when Unity draws the gizmos
     private void OnDrawGizmos()
     {
 		//draws a green sphere at the taget position in the scene view only
