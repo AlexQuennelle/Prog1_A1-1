@@ -46,7 +46,8 @@ public class PlayerController : MonoBehaviour
 	//adjusts the player's position to always be within the screen bounds by wrapping it to the oposite edge when it leaves the screen
     void Wrapscreen()
     {
-		//adds 1.5 times the screen width to the player's x position and takes the remainder.Then subtracts half the screen width. these steps ensure the remainder operator behaves as expected when the player goes into the negative coordinates.
+		//adds 1.5 times the screen width to the player's x position and takes the remainder.Then subtracts half the screen width.
+		//these steps ensure the remainder operator behaves as expected when the player goes into the negative coordinates.
 		//also does the same with the y position and the height of the screen.
         Vector2 newPos = new Vector2(((transform.position.x + 48) % 32) - 16, ((transform.position.y + 27) % 18) - 9);
         transform.position = newPos;

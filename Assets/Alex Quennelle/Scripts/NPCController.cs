@@ -51,12 +51,14 @@ public class NPCController : MonoBehaviour
 	//adjusts the NPC's position to always be within the screen bounds by wrapping it to the oposite edge when it leaves the screen
     void Wrapscreen()
     {
-		//adds 1.5 times the screen width to the NPC's x position and takes the remainder.Then subtracts half the screen width. these steps ensure the remainder operator behaves as expected when the player goes into the negative coordinates.
+		//adds 1.5 times the screen width to the NPC's x position and takes the remainder.Then subtracts half the screen width.
+		//these steps ensure the remainder operator behaves as expected when the player goes into the negative coordinates.
 		//also does the same with the y position and the height of the screen.
         Vector2 newPos = new Vector2(((transform.position.x + 48) % 32) - 16, ((transform.position.y + 27) % 18) - 9);
         transform.position = newPos;
 
-		//get the distance to the target position on each axis, and divide them by the screen width and height respectively. finally, round the result to the nearest integer
+		//get the distance to the target position on each axis, and divide them by the screen width and height respectively.
+		//finally, round the result to the nearest integer
 		//this gives a modifier value which is 1 when the target position is greater than 1 screen away on the respective axis, and 0 when the target position is less than 1 screen away
 		int xMod = (int)Mathf.Round((transform.position.x - targetPos.x) / 32);
 		int yMod = (int)Mathf.Round((transform.position.y - targetPos.y) / 18);
